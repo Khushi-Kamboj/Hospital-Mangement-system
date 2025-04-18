@@ -1,0 +1,168 @@
+/* src/App.css */
+
+/* --- General Body & Layout --- */
+body {
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; /* Modern, readable font */
+  background-color: #f4f7f6; /* A very soft, light grey background */
+  color: #333; /* Default text color */
+  line-height: 1.6;
+}
+
+/* Styles for the main application container after login */
+.max-w-7xl {
+    max-width: 1280px; /* Example: Using Tailwind's max-width-7xl value */
+}
+
+
+/* --- Beautiful Login Form Styles --- */
+
+.login-card {
+  /* Card styling */
+  background-color: #ffffff; /* White background for the card */
+  border-radius: 12px; /* More rounded corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Softer, larger shadow */
+  overflow: hidden; /* Ensures content respects border-radius */
+  border: 1px solid #e0e0e0; /* Subtle light border */
+}
+
+/* Login input fields */
+.login-input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 8px 0;
+  border: 1px solid #d1d5db; /* Light gray border */
+  border-radius: 6px; /* Slightly rounded */
+  font-size: 1rem;
+  color: #374151; /* Dark gray text */
+  background-color: #f9fafb; /* Very light gray background */
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.login-input::placeholder {
+  color: #9ca3af; /* Lighter placeholder text */
+}
+
+.login-input:focus {
+  border-color: #3b82f6; /* Blue border on focus */
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3); /* Blue glow effect (Tailwind blue-500 with alpha) */
+  background-color: #ffffff; /* White background on focus */
+}
+
+/* Login button */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #2563eb; /* A solid blue (Tailwind blue-600) */
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600; /* Semi-bold */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Button shadow */
+}
+
+.login-btn:hover {
+  background-color: #3b82f6; /* Lighter blue on hover */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.login-btn:active {
+    background-color: #1d4ed8; /* Darker blue on active */
+    transform: scale(0.98); /* Slight press effect */
+}
+
+/* Adjust heading color within the login form for contrast */
+.login-card h2 {
+    color: #1f2937; /* Dark heading */
+}
+
+/* --- General Application Section Styles --- */
+
+.section {
+  padding: 24px; /* Increased padding */
+  background-color: #ffffff; /* White background for sections */
+  border-radius: 8px; /* Consistent rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06); /* Soft shadow */
+  margin-bottom: 24px; /* Spacing between sections */
+  border: 1px solid #e5e7eb; /* Light border */
+}
+
+/* Headings within sections */
+.section h2 {
+    color: #1a202c; /* Darker heading color */
+    border-bottom: 2px solid #e2e8f0; /* Subtle light blue-gray underline */
+    padding-bottom: 12px; /* Space below underline */
+    margin-bottom: 20px; /* Space below heading */
+    font-size: 1.8rem; /* Slightly larger headings */
+}
+
+/* --- Form Element Styles (Add Patient, Book Appointment) --- */
+/* Applies to inputs and selects within forms outside of login */
+.form-input,
+.form-select {
+  display: block; /* Make them block elements */
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db; /* Light gray border */
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #374151;
+  background-color: #ffffff;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-input:focus,
+.form-select:focus {
+  border-color: #3b82f6; /* Blue border on focus */
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2); /* Softer blue glow */
+}
+
+/* --- List Item Card Styles (Patients, Doctors, Appointments) --- */
+.card {
+  border: 1px solid #e5e7eb; /* Light border */
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #ffffff; /* White background */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Slightly increased shadow on hover */
+}
+
+.card h3 {
+    color: #1f2937; /* Darker heading for cards */
+}
+
+/* --- Navigation Button Styles --- */
+.nav-button {
+    background-color: #e5e7eb; /* Light grey */
+    color: #374151; /* Dark grey text */
+    padding: 10px 20px;
+    border-radius: 9999px; /* pill shape */
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    font-weight: 500; /* Medium weight */
+}
+
+.nav-button:hover {
+    background-color: #d1d5db; /* Slightly darker grey on hover */
+    color: #1f2937;
+}
+
+.nav-button-active {
+    background-color: #3b82f6; /* Blue */
+    color: white;
+    font-weight: 600; /* Semi-bold */
+    box-shadow: 0 2px 5px rgba(59, 130, 246, 0.3); /* Subtle blue shadow */
+}
+
+.nav-button-active:hover {
+     background-color: #2563eb; /* Darker blue on hover when active */
+     color: white; /* Keep text white */
+}  
